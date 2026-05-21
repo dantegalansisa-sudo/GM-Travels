@@ -54,11 +54,12 @@
   object-position: top center;
 }
 
-/* CEO sin foto: se muestra el logo de la agencia */
-.team-card__image--logo {
+/* CEO y equipo sin foto: se muestra el logo completo de la agencia */
+.team-card--leadership .team-card__image.team-card__image--logo,
+.team__grid--four .team-card__image.team-card__image--logo {
   object-fit: contain;
   background: #ffffff;
-  padding: 28px;
+  padding: 24px;
 }
 
 @media (max-width: 900px) {

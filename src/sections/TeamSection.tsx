@@ -4,15 +4,6 @@ import RevealText from '../components/RevealText';
 import { staggerChildren, fadeInUp } from '../utils/easings';
 import './TeamSection.css';
 
-// Fotos del equipo de ventas. El nombre y la función se mostrarán
-// como "Próximamente" hasta que la agencia los proporcione.
-const team = [
-  '/imagenes/vendedora.png',
-  '/imagenes/vendedor.png',
-  '/imagenes/vendedora1.png',
-  '/imagenes/vendedor1.png',
-];
-
 export default function TeamSection() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
@@ -60,13 +51,13 @@ export default function TeamSection() {
 
           {/* Equipo de trabajo */}
           <div className="team__grid team__grid--four">
-            {team.map((photo, i) => (
+            {[0, 1, 2, 3].map((i) => (
               <motion.div className="team-card" key={i} variants={fadeInUp}>
                 <div className="team-card__image-wrap">
                   <img
-                    src={photo}
-                    alt="Miembro del equipo"
-                    className="team-card__image"
+                    src="/imagenes/logo.png"
+                    alt="Equipo"
+                    className="team-card__image team-card__image--logo"
                     loading="lazy"
                   />
                   <div className="team-card__image-accent" />
